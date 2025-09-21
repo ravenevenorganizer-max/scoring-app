@@ -12,7 +12,10 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/auth/login`,
+        formData
+      );
       localStorage.setItem("token", res.data.token);
       navigate("/master");
     } catch (err) {
@@ -31,14 +34,18 @@ export default function Login() {
           type="text"
           placeholder="Nama"
           value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, name: e.target.value })
+          }
           required
         />
         <input
           type="password"
           placeholder="Password"
           value={formData.password}
-          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, password: e.target.value })
+          }
           required
         />
         <button type="submit">Masuk</button>
