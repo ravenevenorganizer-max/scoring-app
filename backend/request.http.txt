@@ -1,0 +1,41 @@
+### Cek server jalan
+GET http://localhost:5000/
+
+### Ambil semua users
+GET http://localhost:5000/api/users
+
+### Tambah user baru
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "name": "Andi",
+  "email": "andi@mail.com"
+}
+
+### Tambah user lagi
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "name": "Budi",
+  "email": "budi@mail.com"
+}
+
+### Ambil semua users lagi setelah insert
+GET http://localhost:5000/api/users
+
+### Update user dengan id = 1
+PUT http://localhost:5000/api/users/1
+Content-Type: application/json
+
+{
+  "name": "Andi Update",
+  "email": "andi_update@mail.com"
+}
+
+### Hapus user dengan id = 2
+DELETE http://localhost:5000/api/users/2
+
+### Ambil semua users lagi setelah update & delete
+GET http://localhost:5000/api/users

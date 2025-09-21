@@ -1,0 +1,86 @@
+.scoreboard {
+  background: green;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.name-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.name-inputs input {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  flex: 1;
+  gap: 10px;
+}
+
+/* PLAYER BLOCK */
+.player-block {
+  background: black;
+  border: 4px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.player-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.player-score {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.shuttle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+}
+
+/* MIDDLE PANEL */
+.middle {
+  background: black;
+  border: 4px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-scores {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controls button {
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
